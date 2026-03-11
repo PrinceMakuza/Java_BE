@@ -14,7 +14,7 @@ public class Main {
         runApplication();
     }
 
-    private static void initializeSystem() {
+    private static void initializeSystem() {     // initializes the system with empty data structures and welcomes the user
         accountManager = new AccountManager();
         transactionManager = new TransactionManager();
         scanner = new Scanner(System.in);
