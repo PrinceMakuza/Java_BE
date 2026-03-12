@@ -22,7 +22,5 @@ public class RegularCustomer extends Customer {
         return "Regular";
     }
     @Override
-    public boolean hasWaivedFees() {
-        return false;
-    }
+    public boolean hasWaivedFees() { return false; }
 }

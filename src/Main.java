@@ -200,7 +200,9 @@ public class Main {
         System.out.println("-".repeat(30));
 
         if (InputValidator.getYesNoInput(scanner, "\nConfirm transaction?")) {
-            boolean success = (txnType == 1) ? account.deposit(amount) : account.withdraw(amount);
+
+            boolean success = account.processTransaction(amount, type);
+
             if (success) {
                 transactionManager.addTransaction(new Transaction(
                         accountNumber, type, amount, account.getBalance()));
@@ -208,6 +210,7 @@ public class Main {
             } else {
                 System.out.println("\n✗ Transaction failed!");
             }
+
         } else {
             System.out.println("\nTransaction cancelled.");
         }
